@@ -1,0 +1,130 @@
+body{
+    background-color: lightgray;
+}
+
+
+.solid{
+
+    border: 5px solid darkblue;
+    background-color:bisque;
+}
+
+h1{
+    position: absolute;
+    color: darkgreen;
+    top: 45px;
+    left: 580px;
+    font-size: 35px;
+    text-align: center;
+}
+
+
+
+
+#java{
+    position: absolute;
+    bottom:75%;
+    right:0%;
+}
+
+a{
+    margin: 30px;
+}
+
+#dotted{ border-style:dotted;
+        color:red}
+
+#black{color:black}
+
+h2{
+    text-align:center;
+}
+
+
+#texto{
+    text-align:center;
+    color:indigo;
+}
+
+table{
+    position: relative;
+    left:500px;
+    text-align:center;
+}
+
+#site{
+    color:darkgreen;
+    margin-right: 200px;
+    text-align: center;
+    
+}
+
+
+#livros{
+    text-align: center;
+}
+#livros{
+    position: relative;
+    left: 300px;
+    width: 200px;
+    height: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+#menu{
+    text-align:center;
+    display: block;
+    background-color:  lightblue;
+
+}
+
+#iframes{
+    position: relative;
+    left: 320px;
+    width: 300px;
+    height: 300px;
+    margin-right: 70px;
+}
+
+.final{
+    
+    background-color:yellow;
+    margin-right: 400px;
+    margin-left: 400px;
+}
+
+#d{
+    
+    border: 30px solid bisque;
+    background-color: bisque;
+}
+
+#html{
+    
+    position: absolute;
+    height: 90px;
+    margin-top: -70px;
+    
+}
+
+#css{
+    position: absolute;
+    margin-left: 1100px;
+    margin-top: -20px;
+    height: 90px;
+    width: 70px;
+}
+
+.alinhamento{
+    margin-left: 80px;
+}
+
+#preto{ 
+    color: black;
+    text-align: center;
+}
+#red{
+    color:darkred
+}
