@@ -1,0 +1,38 @@
+body{
+    background-color:#FAF7F2; 
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.principal{
+text-align: center;
+background-color: #FAF7F2;
+}
+
+.segunda{
+    background-color: #FFFFFF;
+}
+
+.terceiro{
+    text-align: center;
+
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+}
+
+footer{
+    background-color: black;
+}
+
+.branco{
+    font-color: white;
+}
