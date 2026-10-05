@@ -1,0 +1,183 @@
+body{
+    background-color: #FAF7F2;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    border-bottom: 1px solid #EDE3D3;
+}
+
+main div{
+    display: flex;
+    align-content: center;
+    margin: 25px;
+    gap: 30px;
+
+}
+
+
+#segunda{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#fotoperfil{
+    margin-top: 70px;
+}
+
+#laranja{
+    color: #D97757;
+    font-weight: bold;
+}
+
+ .botao{
+    display: inline-block;
+    border: 2px solid #3F6C51;
+    border-radius: 40px;
+    padding: 15px 15px;
+    background-color: #3F6C51;
+    color: white;
+}
+
+.botao2{
+
+   display: inline-block;
+    border: 2px solid #3F6C51;
+    border-radius: 40px;
+    padding: 15px 15px;
+    color: #3F6C51
+    
+}
+
+.botoes{
+   flex-direction: row;
+   align-content: space-between;
+
+}
+
+p{
+    color: #2B2A28;
+}
+
+
+
+
+.sectioncolor{
+    background-color:  white;
+    display: flex;
+    
+    
+}
+
+
+div #sobre{
+    display: flex;
+    justify-content: column;
+    
+}
+
+div #habilidades{
+
+    display: flex;
+    justify-content: column;
+    
+}
+
+#span1{
+    display: inline-block;
+    border: 2px solid #EFE7DB;
+    background-color: #EFE7DB;
+    border-radius: 40px;
+    padding: 15px 15px;
+    color: #3F6C51
+    
+}
+
+#span2{
+    display: inline-block;
+    border: 2px solid #EFE7DB;
+    background-color: #EFE7DB;
+    border-radius: 40px;
+    padding: 15px 15px;
+    color: #3F6C51
+    
+}
+#span3{
+    display: inline-block;
+    border: 2px solid #EFE7DB;
+    background-color: #EFE7DB;
+    border-radius: 40px;
+    padding: 15px 15px;
+    color: #3F6C51
+    
+}
+#span4{
+    display: inline-block;
+    border: 2px solid #EFE7DB;
+    background-color: #EFE7DB;
+    border-radius: 40px;
+    padding: 15px 15px;
+    color: #3F6C51
+    
+}
+#span5{
+    display: inline-block;
+    border: 2px solid #EFE7DB;
+    background-color: #EFE7DB;
+    border-radius: 40px;
+    padding: 15px 15px;
+    color: #3F6C51
+    
+}
+#span6{
+    display: inline-block;
+    border: 2px solid #EFE7DB;
+    background-color: #EFE7DB;
+    border-radius: 40px;
+    padding: 15px 15px;
+    color: #3F6C51
+
+}
+  
+#projetos{
+  text-align: center;
+}
+
+.paineis{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.painel1{
+    display: flex;
+    flex-direction: column;
+}
+
+#borda{
+    display: inline-block;
+    border: 2px solid #F1EAE3;
+    background-color: #F1EAE3;
+    color: #8B4B3A;
+    border-radius: 40px;
+    padding: 15px 15px;
+}
+
+
+footer{
+    background-color: black;
+
+}
+
+.footerletras{
+   color: white;
+   text-align:center;
+
+}
+
+#mensagem{
+    text-align: center;
+    color: white;
+}
