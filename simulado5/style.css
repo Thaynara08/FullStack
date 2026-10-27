@@ -1,0 +1,94 @@
+body{
+    background-color: #FAF7F2;
+}
+
+main{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+    
+}
+
+.centro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+#laranja{
+    color: #D97757;
+}
+
+.conjunto{
+    display: flex;
+    justify-content:space-between;
+    gap: 40px;
+}
+
+#botao{
+    display: inline-block;
+    border: 2px solid #3F6C51;
+    border-radius: 30px;
+    background-color: #3F6C51;
+    padding: 15px 20px;
+    color: white;
+
+}
+
+#botao2{
+    display: inline-block;
+    border: 2px solid #3F6C51;
+    border-radius: 30px;
+    color: #3F6C51;
+    padding: 15px 20px;
+
+}
+
+.meio{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    margin-top: 30px;
+    padding: 100px 100px;
+    gap: 300px;
+}
+
+#sobre{
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    color: #2B2A28;
+}
+
+#projetos{
+    text-align: center;
+}
+
+.paineis{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+footer{
+    text-align: center;
+    background-color: black;
+    padding: 50px 50px;
+    color: white;
+    margin-top: 60px;
+}
+
+#branco{
+    color: white;
+}
