@@ -57,3 +57,53 @@ app.get("/for", function(req,res){
     console.log(qtde);
     res.render("for.ejs", {qtde})
 })
+
+
+
+
+//laboratorio8
+
+let log_salvo=''
+let cad_salvo= ''
+
+app.get('/', function(req,res){
+  res.redirect("cadastro.html")  
+})
+
+app.get('/cad', function(req,res){
+    let nome = req.query.nome;
+    let cpf = req.query.cpf;
+    let senha = req.query.senha;
+
+    console.log(nome,cpf,senha);
+
+     log_salvo= nome
+     cad_salvo= senha
+
+    res.render("resposta2.ejs", {
+        resposta: "Usúario cadastrado!"
+    
+    })
+
+})
+
+
+app.get('/log', function(req,res){
+    let nome = req.body.nome;
+    let senha = req.body.senha;
+
+        console.log(nome,senha);
+
+        res.render("resposta2.ejs", {
+            resposta: "Login realizado!"
+        })
+
+        if (log_salvo == nome && cad_salvo == senha){
+            res.render("resposta2.ejs", {
+            resposta: "Login realizado!"
+        })
+
+        }
+})
+
+
