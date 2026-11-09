@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rumo ao Espaço</title>
+
+  <!-- Liga o arquivo de estilos (CSS) -->
+  <link rel="stylesheet" href="jogo.css">
+</head>
+<body>
+
+  <!-- O canvas é a "tela de desenho" do jogo.
+       width e height definem a resolução interna (400x600 pixels).
+       O id "jogo" é usado no JavaScript para encontrar este elemento. -->
+  <canvas id="jogo" width="400" height="600"></canvas>
+
+  <!-- Texto de instruções abaixo do jogo -->
+  <p>← → ou A D para mover · Espaço / ↑ para pular · R reinicia</p>
+
+  <!-- Liga o arquivo JavaScript. Fica no final do body para que o canvas
+       já exista na página quando o código rodar. -->
+  <script src="jogo.js"></script>
+</body>
+</html>

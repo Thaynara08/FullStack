@@ -11,11 +11,15 @@ body{
 #menu{
     padding: 15px;
     background-color:aqua;
-    text-align: center;
+    display: flex;
+    gap: 30px;
+    margin-top: -20px;
 }
 
 #imagemThay{
-    margin-left: 500px;
+    display: flex;
+    justify-self: center;
+    margin-top: 20px;
 }
   p{
         margin: 10px;
@@ -37,7 +41,20 @@ body{
 .iframe{
     text-align: center;
 }
+
+.meio{
+    display: flex;
+    justify-self: center;
+    gap: 80px;
+}
+
+#final{
+    display: flex;
+    justify-content: center;
     
+}
+
+
    
 
 

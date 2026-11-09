@@ -1,0 +1,33 @@
+/* Remove margens padrão e faz a página ocupar a tela toda */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Centraliza o canvas e o texto no meio da página.
+   display:flex + flex-direction:column coloca os itens um embaixo do outro;
+   align-items centraliza na horizontal; justify-content na vertical. */
+body {
+  background: #f2f2f2;
+  color: #222;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Borda ao redor do jogo.
+   max-height evita que o canvas fique maior que a janela. */
+canvas {
+  border: 2px solid #222;
+  max-width: 100%;
+  max-height: 85vh;
+}
+
+/* Texto das instruções */
+p {
+  margin: 8px;
+  font-size: 14px;
+  text-align: center;
+}
