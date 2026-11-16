@@ -29,6 +29,44 @@
     <input type="submit">
 </form>
 
+<!--AULA 11-->
+
+<h2>Exemplos de Banco de Dados</h2>
+<form action="/bd_cadstrar" method ='post'>
+    <p>CREATE</p>
+    <p>Nome: <input type='text' name='nome'></p>
+    <p>login: <input type='text' name='login'></p>
+    <p>Senha: <input type='password' name='senha'></p>
+    <input type="submit" value="Cadstrar">
+</form>
+
+<form action="/bd_logar" method ='post'>
+    <p>READ</p>
+    <p>login: <input type='text' name='login'></p>
+    <p>Senha: <input type='password' name='senha'></p>
+    <input type="submit" value="Logar">
+</form>
+
+<form action="/bd_editar" method ='post'>
+    <p>UPDATE</p>
+    <p>login: <input type='text' name='login'></p>
+    <p>Senha atual: <input type='password' name='senha'></p>
+    <p>Nova senha: <input type='password' name='novasenha'></p>
+    <input type="submit" value="Editar">
+</form>
+
+<form action="/bd_remover" method ='post'>
+    <p>DELET</p>
+    <p>login: <input type='text' name='login'></p>
+    <p>Senha: <input type='password' name='senha'></p>
+
+    <input type="submit" value="Remover">
+</form>
+
+<!--em vez de usar form, pode usar link e o href é a ação-->
+<a href="/listar">Listar usuários</a>
+
+
  </body>
 
 

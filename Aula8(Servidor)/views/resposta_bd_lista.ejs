@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista de usuários</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="lista.css">   
+    </head>
+
+    <body>
+        <h1>Lista de usuários</h1>
+
+        <p id="qtde"> Quantidade de usuários: <%= itens.length %> </p>
+
+        <% for(let i = 0; i<itens.length; i++) { %>
+
+                <div id="item">
+            <p>Nome: <%= itens[i].db_nome %> </p>
+            <p>Login: <%= itens[i].db_login %> </p>
+            <p>Senha: <%= itens[i].db_senha %> </p>
+            </div>
+
+        <% } %>
+    </body>
+</html>
