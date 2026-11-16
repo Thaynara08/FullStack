@@ -68,6 +68,16 @@ h3{
     margin-top: 80px;
 }
 
+#tres{
+    display: inline-block;
+    border: 2px solid #8a2be2;
+    border-radius: 30px;
+    box-shadow: 0 0 15px #8a2be2;
+    width: 400px;
+    padding: 30px;
+    margin-top: 80px;
+}
+
 #dois{
     display: flex;
     flex-direction: row-reverse;
