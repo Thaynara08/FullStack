@@ -12,6 +12,20 @@ let bodyParser = require("body-parser")
 app.use(bodyParser.urlencoded({extended: false }))
 app.use(bodyParser.json())
 
+/////////////////////////////////Aula11/////////////////////////////////////////////
+
+let mongodb = require('mongodb')
+const MongoClient = mongodb.MongoClient;
+const uri ='mongodb+srv://ramosthaynara08_db_user:rP4de2Br1gb8m5mZ@thay.v144fez.mongodb.net/';
+//segunda opção
+//const uri = '//mongodb://localhost:27017'
+const client = new MongoClient(uri, { useNewUrlParser: true });
+
+var dbo = client.db("exemplo_bd");
+var usuarios = dbo.collection("usuarios");
+
+///////////////////////////////////
+
 app.set('view engine', 'ejs') 	 
 app.set('views', './views')
 
@@ -104,6 +118,136 @@ app.get('/log', function(req,res){
         })
 
         }
+})
+
+///////////////AULA11//////////////////////////// como cadastrar o usuario no bamco e dados e dar uma resposta
+//query é do get
+//body é do post
+
+app.post('/bd_cadstrar', function(req,res){
+    let nome = req.body.nome;
+    let login = req.body.login;
+    let senha = req.body.senha;
+
+    let data = {db_nome: nome, db_login: login, db_senha: senha}
+    usuarios.insertOne(data, function(err){
+        if(err){
+            res.render("respostabd.ejs", {resposta: "Erro ao cadastrar usuário!"})
+
+        }else{
+            res.render("respostabd.ejs", {resposta: "Usuário cadastrado com sucesso!"})
+
+
+        }
+
+
+    });
+
+})
+
+//logar
+
+app.post("/bd_logar", function(req,res){
+     let login = req.body.login;
+     let senha = req.body.senha;
+
+     //define o q sera buscado no banco de dados
+    let data = {db_login: login, db_senha: senha}
+    //find para buscar e toArray para 
+    usuarios.find(data).toArray(function(err, itens){
+
+        if (err){
+            res.render("respostabd.ejs", {resposta: "Erro ao buscar usuario!"})
+        
+            //lenght para saber o tamanho
+        }else if(itens.length == 0){
+            res.render("respostabd.ejs", {resposta: "Usuário/Senha não encontado!"})
+
+        }else{
+             res.render("respostabd.ejs", {resposta: "Usuário logado com sucesso!"})
+        }
+    })
+})
+
+//UPDATE
+
+app.post("/bd_editar", async function(req,res){
+    let login = req.body.login;
+    let senha = req.body.senha;
+    let novasenha = req.body.novasenha;
+
+        //1 data para buscar
+    let data = {db_login: login, db_senha: senha}
+    //2 data para atualizar
+
+    let newdata = {$set : {db_senha: novasenha}}
+    
+    try{
+
+    const result = await usuarios.updateOne(data, newdata);
+    console.log(result)
+
+    if (result.matchedCount == 0){
+        res.render("respostabd.ejs", {resposta: "Usuário/Senha não encontrado!" });
+
+    }else{
+        res.render("respostabd.ejs", {resposta: "Usuário atualizado com sucesso!" });
+    }
+
+    } catch (err) {
+        console.error(err);
+        res.render('respostabd.ejs', { resposta: "Erro ao atualizar usuário!" });
+
+
+
+    }
+    
+
+})
+
+//REMOVER
+
+app.post("/bd_remover", async function (req,res){
+    let login = req.body.login;
+    let senha = req.body.senha;
+
+    let data = {db_login: login, db_senha: senha}
+
+    //verificar erro
+    try{
+    //para armazenar o dado na variavel
+    const result = await usuarios.deleteOne(data);
+    console.log(result);
+
+    
+    if (result.deletedCount == 0){
+        res.render("respostabd.ejs", {resposta: "Usuário/Senha não encontrado!" });
+    
+    }else{
+        res.render("respostabd.ejs", {resposta: "Usuário removido com sucesso!" });
+    }
+ } catch (err) {
+        console.error(err);
+        res.render('respostabd.ejs', { resposta: "Erro ao remover usuário!" });
+
+
+
+    }
+
+})
+
+app.get("/listar", function(req,res){
+
+    const data = {}
+    usuarios.find(data).toArray(function(err, itens){
+
+        if(err){
+            console.log(err);
+            res.render("respostabd.ejs", {resposta: "Erro ao listar usuários"})
+        } else{
+            res.render("resposta_bd_lista.ejs", {itens});
+        }
+    })
 })
 
 
