@@ -1,0 +1,47 @@
+body{
+    background-image: url('de.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#menu{
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  border-bottom: 2px solid purple;
+}
+
+
+
+a{
+    color: rgb(133, 2, 119);
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+a:hover{
+    color: #8203b4;
+    text-shadow: 0 0 10px #A855F7;
+
+}
+
+h2{
+    color: white;
+    font-size: 25px ;
+    margin-top: 5px;
+    text-shadow: 0 0 20px rgb(255, 4, 222);
+}
+
+
+/* Borda ao redor do jogo.
+   max-height evita que o canvas fique maior que a janela. */
+canvas {
+  border: 2px solid #222;
+  max-width: 100%;
+  max-height: 85vh;
+  display: flex;
+  justify-self: center;
+  margin-top: 50px;
+}
